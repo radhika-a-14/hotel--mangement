@@ -1,10 +1,12 @@
 import express from  "express"
 import dotenv from "dotenv";
-dotenv.config({path:"./server/.env"});
+dotenv.config();
 import cors from 'cors';
 import { clerkMiddleware } from '@clerk/express'
 import connectDB from "./configs/db.js";
 import clerkWebhooks from "./controllers/clerkWebhooks.js";
+
+dotenv.config({path:'./server/.env'});
 console.log("Mongo URI:", process.env.MONGODB_URI);
 
 
